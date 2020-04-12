@@ -81,10 +81,10 @@ def unwrap(data_path, lesion_types):
     # remove unused folders and files
     rmtree(f'{data_path}/HAM10000_images_part_1/')
     rmtree(f'{data_path}/HAM10000_images_part_2/')
-    rmtree(f'{data_path}/hmnist_28_28_L.csv')
-    rmtree(f'{data_path}/hmnist_28_28_RGB.csv')
-    rmtree(f'{data_path}/hmnist_8_8_RGB.csv')
-    rmtree(f'{data_path}/hmnist_8_8_L.csv')
+    os.remove(f'{data_path}/hmnist_28_28_L.csv')
+    os.remove(f'{data_path}/hmnist_28_28_RGB.csv')
+    os.remove(f'{data_path}/hmnist_8_8_RGB.csv')
+    os.remove(f'{data_path}/hmnist_8_8_L.csv')
 
     return train_path, valid_path, test_path
 
