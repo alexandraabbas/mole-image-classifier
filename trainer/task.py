@@ -5,8 +5,8 @@ from datetime import datetime
 
 import tensorflow as tf
 
-from util import download_unwrap
-from model import (
+from trainer.util import download_unwrap
+from trainer.model import (
     train_input_fn,
     valid_input_fn,
     create_keras_model
