@@ -16,10 +16,11 @@ def copy_key(key_file):
 
 def download():
     import kaggle
+    kaggle.api.authenticate()
 
     download_path = f'{DIR_PATH}/data/'
 
-    kaggle.api.authenticate()
+    logging.info('Downloading files from Kaggle...')
     kaggle.api.dataset_download_files(
         'kmader/skin-cancer-mnist-ham10000',
         path=download_path,
